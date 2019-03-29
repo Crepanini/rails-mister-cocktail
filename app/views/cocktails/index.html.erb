@@ -1,0 +1,12 @@
+<h1>Cocktails</h1>
+<div class="container">
+  <div class="row">
+    <% @cocktails.each do |c| %>
+      <div class="col-4">
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.pexels.com/photos/970197/pexels-photo-970197.jpeg?cs=srgb&dl=alcoholic-beverage-beverage-cocktail-970197.jpg&fm=jpg)">
+          <%= link_to c.name, cocktail_path(c) %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
