@@ -1,17 +1,7 @@
-<!-- Navbar -->
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li>
-        <%= image_tag "Logo.png", alt: "Cocktail", width: 300 %>
-      </li>
-    </ul>
-  </div>
-</div>
 <!-- Card -->
 <div class="container">
   <class="nav-item active">
-    <%= link_to "Add Cocktail",new_cocktail_path%>
+    <%= link_to "Add Cocktail",new_cocktail_path, :class => "btn, btn-warning"%>
     <div class="row">
       <% @cocktails.each do |c| %>
         <div class="col-4">

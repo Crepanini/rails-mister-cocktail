@@ -1,11 +1,12 @@
 <h1><%= @cocktail.name %></h1>
 <% @cocktail.doses.each do |d| %>
   <li>
-    <%= d.ingredient.name %> (<%= d.description %>)
-    <%= link_to dose_path(d), method: :delete do %>
-      <i class="fa fa-beer"></i>
-    <% end %>
+    <p class="text-align-center">
+      <%= d.ingredient.name %> (<%= d.description %>)
+      <%= link_to dose_path(d), method: :delete do %>
+        <i class="far fa-minus-square"></i>
+      <% end %>
+    </p>
   </li>
 <% end %>
-<p><%= link_to "Add a dose!", new_cocktail_dose_path(@cocktail) %></p>
-<p><%= link_to "Home", cocktails_path  %></p>
+<p><%= link_to "Add a dose", new_cocktail_dose_path(@cocktail), class: "btn btn-warning" %></p>
