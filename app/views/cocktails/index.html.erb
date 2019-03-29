@@ -3,30 +3,24 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li>
-        <%= image_tag "Logo.png", alt: "Cocktail", width: 60 %>
-      </li>
-      <li class="nav-item active">
-        <%= link_to "Add Cocktail",new_cocktail_path%>
+        <%= image_tag "Logo.png", alt: "Cocktail", width: 300 %>
       </li>
     </ul>
   </div>
 </div>
-</div>
-<!-- Banner -->
-<div class="banner" style="background-color:#faf4ff;">
-  <div class="container">
-  </div>
-</div>
 <!-- Card -->
-<h1>Cocktails</h1>
 <div class="container">
-  <div class="row">
-    <% @cocktails.each do |c| %>
-      <div class="col-4">
-        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.pexels.com/photos/970197/pexels-photo-970197.jpeg?cs=srgb&dl=alcoholic-beverage-beverage-cocktail-970197.jpg&fm=jpg)">
-          <%= link_to c.name, cocktail_path(c) %>
+  <class="nav-item active">
+    <%= link_to "Add Cocktail",new_cocktail_path%>
+    <div class="row">
+      <% @cocktails.each do |c| %>
+        <div class="col-4">
+          <div class="card-margin">
+            <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.pexels.com/photos/970197/pexels-photo-970197.jpeg?cs=srgb&dl=alcoholic-beverage-beverage-cocktail-970197.jpg&fm=jpg)">
+              <%= link_to c.name, cocktail_path(c) %>
+            </div>
+          </div>
         </div>
-      </div>
-    <% end %>
+      <% end %>
+    </div>
   </div>
-</div>
