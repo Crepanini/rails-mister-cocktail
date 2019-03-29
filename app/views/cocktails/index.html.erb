@@ -8,7 +8,7 @@
       <% @cocktails.each do |c| %>
         <div class="col-4">
           <div class="card-margin">
-            <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.pexels.com/photos/970197/pexels-photo-970197.jpeg?cs=srgb&dl=alcoholic-beverage-beverage-cocktail-970197.jpg&fm=jpg)">
+            <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://source.unsplash.com/collection/2469482/800x600/?sig=<%=rand(99)%>)">
               <%= link_to c.name, cocktail_path(c) %>
             </div>
           </div>
