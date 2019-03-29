@@ -8,6 +8,7 @@
 
 require 'open-uri'
 
+Dose.delete_all if Rails.env.development?
 Ingredient.delete_all if Rails.env.development?
 Cocktail.delete_all if Rails.env.development?
 
