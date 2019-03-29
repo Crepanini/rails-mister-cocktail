@@ -1,7 +1,9 @@
 <!-- Card -->
 <div class="container">
+  <div class="add-button">
+    <%= link_to "Add Cocktail",new_cocktail_path, :class => "btn, btn-outline-warning"%>
+  </div>
   <class="nav-item active">
-    <%= link_to "Add Cocktail",new_cocktail_path, :class => "btn, btn-warning"%>
     <div class="row">
       <% @cocktails.each do |c| %>
         <div class="col-4">
