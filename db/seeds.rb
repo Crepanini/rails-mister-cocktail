@@ -36,7 +36,9 @@ url = "https://raw.githubusercontent.com/maltyeva/iba-cocktails/master/recipes.j
 cocktails_array = JSON.parse(open(url).read)
 
 cocktails_array.each do |cocktail|
-  c = Cocktail.create!(name: cocktail["name"])
+  c = Cocktail.new(name: cocktail["name"])
+  c.remote_photo_url = "https://images.unsplash.com/photo-1511690656952-34342bb7c2f2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=80"
+  c.save
   p "Added #{c.name} to the list"
   cocktail["ingredients"].each do |ing|
     unless ing["ingredient"].nil?
